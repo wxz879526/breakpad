@@ -11,7 +11,7 @@ crash-reporting system.
 * Tests: [![Build Status](https://travis-ci.org/google/breakpad.svg?branch=master)](https://travis-ci.org/google/breakpad) [![Build status](https://ci.appveyor.com/api/projects/status/eguv4emv2rhq68u2?svg=true)](https://ci.appveyor.com/project/vapier/breakpad)
 * Coverage [![Coverity Status](https://scan.coverity.com/projects/9215/badge.svg)](https://scan.coverity.com/projects/google-breakpad)
 
-## Getting started (from master)
+## Getting started for windows(from master)
 
 1.  First, [download depot_tools](http://dev.chromium.org/developers/how-tos/install-depot-tools)
     and ensure that they’re in your `PATH`.
@@ -20,7 +20,8 @@ crash-reporting system.
     breakpad).
 
     ```sh
-    mkdir breakpad && cd breakpad
+    mkdir breakpad
+    cd breakpad
     ```
 
 3.  Run the `fetch` tool from depot_tools to download all the source repos.
@@ -28,33 +29,6 @@ crash-reporting system.
     ```sh
     fetch breakpad
     cd src
-    ```
-
-4.  Build the source.
-
-    ```sh
-    ./configure && make
-    ```
-
-    You can also cd to another directory and run configure from there to build
-    outside the source tree.
-
-    This will build the processor tools (`src/processor/minidump_stackwalk`,
-    `src/processor/minidump_dump`, etc), and when building on Linux it will
-    also build the client libraries and some tools
-    (`src/tools/linux/dump_syms/dump_syms`,
-    `src/tools/linux/md2core/minidump-2-core`, etc).
-
-5.  Optionally, run tests.
-
-    ```sh
-    make check
-    ```
-
-6.  Optionally, install the built libraries
-
-    ```sh
-    make install
     ```
 
 If you need to reconfigure your build be sure to run `make distclean` first.
