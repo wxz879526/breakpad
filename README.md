@@ -30,8 +30,7 @@ crash-reporting system.
     fetch breakpad
     cd src
     ```
-
-If you need to reconfigure your build be sure to run `make distclean` first.
+4. Finally, at src/client/windows you will see breakpad_client.sln
 
 To update an existing checkout to a newer revision, you can
 `git pull` as usual, but then you should run `gclient sync` to ensure that the
